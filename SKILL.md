@@ -47,6 +47,7 @@ end                       # 退出配置模式并保存
 - 查看：`show <table>` / `show full-configuration <table>`；退出配置可用 `abort` 放弃未提交改动。
 - 布尔选项通常为 `enable` / `disable`；很多功能需 `set utm-status enable` 后才出现安全配置项。
 - 接口名称区分大小写，常用 `port1`/`port2` 或自定义名；策略方向由 `srcintf`/`dstintf` 决定。
+- 安全配置文件在策略中通过 `set av-profile` / `set ips-sensor` / `set webfilter-profile` / `set dnsfilter-profile` 等绑定（FortiOS 8.0.0 命名）；启用前通常需 `set utm-status enable`。引用前须先在对应 reference（11/12/13/14/15）中创建该配置文件。
 
 ## 工作流
 
@@ -115,6 +116,9 @@ config firewall policy
         set schedule "always"
         set service "ALL"
         set nat enable
+        set utm-status enable
+        set av-profile "default"
+        set ips-sensor "default"
         set logtraffic all
     next
 end
@@ -135,6 +139,9 @@ end
 | `set schedule "always"` | 生效时间表 |
 | `set service "ALL"` | 服务对象 |
 | `set nat enable` | 开启源 NAT（出向地址转换） |
+| `set utm-status enable` | 启用安全配置文件绑定 |
+| `set av-profile "default"` | 绑定防病毒配置文件 |
+| `set ips-sensor "default"` | 绑定 IPS 传感器 |
 | `set logtraffic all` | 记录全部流量日志 |
 | `next` / `end` | 保存条目 / 退出并保存 |
 
