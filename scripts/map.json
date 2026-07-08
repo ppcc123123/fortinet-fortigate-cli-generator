@@ -1,0 +1,333 @@
+{
+  "source_pdf": "FortiOS-8.0.0-CLI_Reference.pdf",
+  "themes": [
+    {
+      "key": "00-cli-basics",
+      "title": "FortiOS CLI 基础与命令树",
+      "desc": "命令可用性说明、全局命令树结构，理解 config/edit/set/next/end 配置模式的基础",
+      "sections": [
+        {"level": 2, "title": "Availability of commands and options"},
+        {"level": 2, "title": "Command tree"}
+      ]
+    },
+    {
+      "key": "01-system-interfaces",
+      "title": "系统：接口 / Zone / 隧道 / VDOM",
+      "desc": "物理/逻辑接口、Zone、聚合/软件交换机、虚拟线对、各类隧道(gre/ipip/ipv6/sit/geneve/vxlan/pppoe)、VDOM 与 VDOM 链路",
+      "sections": [
+        {"level": 3, "title": "config system interface"},
+        {"level": 3, "title": "config system zone"},
+        {"level": 3, "title": "config system physical-switch"},
+        {"level": 3, "title": "config system virtual-switch"},
+        {"level": 3, "title": "config system virtual-wire-pair"},
+        {"level": 3, "title": "config system switch-interface"},
+        {"level": 3, "title": "config system vdom"},
+        {"level": 3, "title": "config system vdom-link"},
+        {"level": 3, "title": "config system vdom-dns"},
+        {"level": 3, "title": "config system vdom-netflow"},
+        {"level": 3, "title": "config system vdom-property"},
+        {"level": 3, "title": "config system vdom-radius-server"},
+        {"level": 3, "title": "config system vdom-sflow"},
+        {"level": 3, "title": "config system vdom-exception"},
+        {"level": 3, "title": "config system gre-tunnel"},
+        {"level": 3, "title": "config system ipip-tunnel"},
+        {"level": 3, "title": "config system ipv6-tunnel"},
+        {"level": 3, "title": "config system sit-tunnel"},
+        {"level": 3, "title": "config system geneve"},
+        {"level": 3, "title": "config system pppoe-interface"},
+        {"level": 3, "title": "config system vxlan"},
+        {"level": 3, "title": "config system wccp"}
+      ]
+    },
+    {
+      "key": "02-system-network",
+      "title": "系统：DNS / DHCP / NTP / SNMP / SDWAN / 全局",
+      "desc": "DNS、DHCP 服务、NTP、SNMP、NetFlow/sFlow、SDWAN、链路监测、全局与基础设置、会话、IPAM",
+      "sections": [
+        {"level": 3, "title": "config system dns"},
+        {"level": 3, "title": "config system dns64"},
+        {"level": 3, "title": "config system dns-database"},
+        {"level": 3, "title": "config system dns-server"},
+        {"level": 3, "title": "config system dhcp server"},
+        {"level": 3, "title": "config system dhcp template"},
+        {"level": 3, "title": "config system dhcp6 server"},
+        {"level": 3, "title": "config system ntp"},
+        {"level": 3, "title": "config system snmp community"},
+        {"level": 3, "title": "config system snmp user"},
+        {"level": 3, "title": "config system snmp sysinfo"},
+        {"level": 3, "title": "config system snmp mib-view"},
+        {"level": 3, "title": "config system snmp rmon-stat"},
+        {"level": 3, "title": "config system netflow"},
+        {"level": 3, "title": "config system sflow"},
+        {"level": 3, "title": "config system sdwan"},
+        {"level": 3, "title": "config system link-monitor"},
+        {"level": 3, "title": "config system global"},
+        {"level": 3, "title": "config system settings"},
+        {"level": 3, "title": "config system session-helper"},
+        {"level": 3, "title": "config system session-ttl"},
+        {"level": 3, "title": "config system ipam"},
+        {"level": 3, "title": "config system arp-table"},
+        {"level": 3, "title": "config system proxy-arp"},
+        {"level": 3, "title": "config system probe-response"}
+      ]
+    },
+    {
+      "key": "03-system-admin",
+      "title": "系统：管理 / AAA / 认证 / 消息 / 自动化",
+      "desc": "管理员与权限(accprofile)、API 用户、密码策略、SSO/SAML、集中管理(CSF/FortiManager)、FortiGuard、替换消息、邮件/SMS 服务器、自动化 stitch",
+      "sections": [
+        {"level": 3, "title": "config system admin"},
+        {"level": 3, "title": "config system accprofile"},
+        {"level": 3, "title": "config system api-user"},
+        {"level": 3, "title": "config system password-policy"},
+        {"level": 3, "title": "config system password-policy-guest-admin"},
+        {"level": 3, "title": "config system sso-admin"},
+        {"level": 3, "title": "config system sso-forticloud-admin"},
+        {"level": 3, "title": "config system sso-fortigate-cloud-admin"},
+        {"level": 3, "title": "config system saml"},
+        {"level": 3, "title": "config system central-management"},
+        {"level": 3, "title": "config system csf"},
+        {"level": 3, "title": "config system fortiguard"},
+        {"level": 3, "title": "config system console"},
+        {"level": 3, "title": "config system dedicated-mgmt"},
+        {"level": 3, "title": "config system theme"},
+        {"level": 3, "title": "config system timezone"},
+        {"level": 3, "title": "config system automation-stitch"},
+        {"level": 3, "title": "config system automation-action"},
+        {"level": 3, "title": "config system automation-trigger"},
+        {"level": 3, "title": "config system automation-condition"},
+        {"level": 3, "title": "config system automation-destination"},
+        {"level": 3, "title": "config system replacemsg-group"},
+        {"level": 3, "title": "config system cloud-service"},
+        {"level": 3, "title": "config system fortisandbox"},
+        {"level": 3, "title": "config system email-server"},
+        {"level": 3, "title": "config system sms-server"},
+        {"level": 3, "title": "config system resource-limits"},
+        {"level": 3, "title": "config system storage"}
+      ]
+    },
+    {
+      "key": "04-system-ha",
+      "title": "系统：高可用 (HA) 与集群",
+      "desc": "HA 双机热备、HA 监控、独立集群(standalone-cluster)、管理隧道、自动扩缩容",
+      "sections": [
+        {"level": 3, "title": "config system ha"},
+        {"level": 3, "title": "config system ha-monitor"},
+        {"level": 3, "title": "config system standalone-cluster"},
+        {"level": 3, "title": "config system management-tunnel"},
+        {"level": 3, "title": "config system auto-scale"}
+      ]
+    },
+    {
+      "key": "05-firewall-policy",
+      "title": "防火墙：安全策略 / 地址 / 服务 / 调度",
+      "desc": "IPv4/IPv6 安全策略、NGFW 安全策略、地址/地址组(含IPv6/wildcard-fqdn)、服务对象/组、调度、安全配置文件组与 ssl-ssh-profile、互联网服务、代理策略",
+      "sections": [
+        {"level": 3, "title": "config firewall policy"},
+        {"level": 3, "title": "config firewall security-policy"},
+        {"level": 3, "title": "config firewall address", "prefix": true},
+        {"level": 3, "title": "config firewall addrgrp", "prefix": true},
+        {"level": 3, "title": "config firewall wildcard-fqdn custom"},
+        {"level": 3, "title": "config firewall wildcard-fqdn group"},
+        {"level": 3, "title": "config firewall service custom"},
+        {"level": 3, "title": "config firewall service group"},
+        {"level": 3, "title": "config firewall service category"},
+        {"level": 3, "title": "config firewall schedule onetime"},
+        {"level": 3, "title": "config firewall schedule recurring"},
+        {"level": 3, "title": "config firewall schedule group"},
+        {"level": 3, "title": "config firewall profile-group"},
+        {"level": 3, "title": "config firewall profile-protocol-options"},
+        {"level": 3, "title": "config firewall ssl-ssh-profile"},
+        {"level": 3, "title": "config firewall proxy-policy"},
+        {"level": 3, "title": "config firewall proxy-address", "prefix": true},
+        {"level": 3, "title": "config firewall proxy-addrgrp", "prefix": true},
+        {"level": 3, "title": "config firewall region"},
+        {"level": 3, "title": "config firewall custom-tag"},
+        {"level": 3, "title": "config firewall traffic-class"},
+        {"level": 3, "title": "config firewall global"},
+        {"level": 3, "title": "config firewall internet-service", "prefix": true}
+      ]
+    },
+    {
+      "key": "06-firewall-nat",
+      "title": "防火墙：NAT (IP池 / 虚拟IP / 中心SNAT)",
+      "desc": "IP 池(ippool, 含IPv6)、虚拟 IP(vip/vipgrp, 含IPv6)、中心 NAT 映射(central-snat-map)、IP 转换、DNS 翻译",
+      "sections": [
+        {"level": 3, "title": "config firewall ippool", "prefix": true},
+        {"level": 3, "title": "config firewall vip", "prefix": true},
+        {"level": 3, "title": "config firewall central-snat-map"},
+        {"level": 3, "title": "config firewall ip-translation"},
+        {"level": 3, "title": "config firewall dnstranslation"}
+      ]
+    },
+    {
+      "key": "07-firewall-advanced",
+      "title": "防火墙：多播/接口策略/本地策略/DoS/限速/嗅探/反向代理",
+      "desc": "多播策略与地址、接口策略、本地入站策略(local-in)、DoS 策略、TTL 策略、流量整形(shaper/shaping-policy)、嗅探、访问代理(access-proxy)、SSL/SSH 设置、IP-MAC 绑定、认证门户",
+      "sections": [
+        {"level": 3, "title": "config firewall multicast-policy", "prefix": true},
+        {"level": 3, "title": "config firewall multicast-address", "prefix": true},
+        {"level": 3, "title": "config firewall interface-policy", "prefix": true},
+        {"level": 3, "title": "config firewall local-in-policy", "prefix": true},
+        {"level": 3, "title": "config firewall DoS-policy", "prefix": true},
+        {"level": 3, "title": "config firewall ttl-policy"},
+        {"level": 3, "title": "config firewall shaping-policy"},
+        {"level": 3, "title": "config firewall shaping-profile"},
+        {"level": 3, "title": "config firewall shaper per-ip-shaper"},
+        {"level": 3, "title": "config firewall shaper traffic-shaper"},
+        {"level": 3, "title": "config firewall sniffer"},
+        {"level": 3, "title": "config firewall on-demand-sniffer"},
+        {"level": 3, "title": "config firewall access-proxy", "prefix": true},
+        {"level": 3, "title": "config firewall ssl setting"},
+        {"level": 3, "title": "config firewall ssh setting"},
+        {"level": 3, "title": "config firewall ipmacbinding setting"},
+        {"level": 3, "title": "config firewall ipmacbinding table"},
+        {"level": 3, "title": "config firewall identity-based-route"},
+        {"level": 3, "title": "config firewall auth-portal"},
+        {"level": 3, "title": "config firewall decrypted-traffic-mirror"}
+      ]
+    },
+    {
+      "key": "08-router",
+      "title": "路由",
+      "desc": "静态路由、默认路由、OSPF/OSPF6、BGP、RIP、ISIS、策略路由、路由映射(route-map)、BGP 社区、BFD、组播路由(PIM)",
+      "sections": [
+        {"level": 2, "title": "router"}
+      ]
+    },
+    {
+      "key": "09-vpn",
+      "title": "VPN (IPsec / SSL / 拨号)",
+      "desc": "IPsec 阶段1/2、IKE、SSL VPN、拨号(拨号接口)、L2TP、GRE over IPsec、证书绑定",
+      "sections": [
+        {"level": 2, "title": "vpn"}
+      ]
+    },
+    {
+      "key": "10-user-auth",
+      "title": "用户 / 认证 / 证书",
+      "desc": "本地用户与用户组、LDAP/RADIUS/TACACS+/FSSO 服务器、认证方案与规则、PKI 证书(CA/本地/证书远程)、guest 用户",
+      "sections": [
+        {"level": 2, "title": "user"},
+        {"level": 2, "title": "authentication"},
+        {"level": 2, "title": "certificate"}
+      ]
+    },
+    {
+      "key": "11-utm-antivirus-ips",
+      "title": "威胁防护：防病毒 / IPS / 虚拟补丁",
+      "desc": "防病毒配置文件、IPS 传感器与规则、虚拟补丁(virtual-patch)防护",
+      "sections": [
+        {"level": 2, "title": "antivirus"},
+        {"level": 2, "title": "ips"},
+        {"level": 2, "title": "virtual-patch"}
+      ]
+    },
+    {
+      "key": "12-utm-web-filter",
+      "title": "内容安全：Web过滤/DNS过滤/邮件代理/文件过滤",
+      "desc": "Web 过滤、DNS 过滤、Web 代理、FTP 代理、邮件过滤、文件过滤(文件类型阻断)",
+      "sections": [
+        {"level": 2, "title": "webfilter"},
+        {"level": 2, "title": "dnsfilter"},
+        {"level": 2, "title": "web-proxy"},
+        {"level": 2, "title": "ftp-proxy"},
+        {"level": 2, "title": "emailfilter"},
+        {"level": 2, "title": "file-filter"}
+      ]
+    },
+    {
+      "key": "13-app-control",
+      "title": "应用控制",
+      "desc": "应用识别列表、应用分组、自定义应用、应用控制列表与规则、分类设置",
+      "sections": [
+        {"level": 2, "title": "application"}
+      ]
+    },
+    {
+      "key": "14-voip-dlp",
+      "title": "VoIP / DLP / CASB / 其他协议过滤",
+      "desc": "VoIP 配置、视频过滤、数据防泄漏(DLP)、CASB、Diameter/SCTP/SSH 协议过滤",
+      "sections": [
+        {"level": 2, "title": "voip"},
+        {"level": 2, "title": "videofilter"},
+        {"level": 2, "title": "dlp"},
+        {"level": 2, "title": "casb"},
+        {"level": 2, "title": "diameter-filter"},
+        {"level": 2, "title": "sctp-filter"},
+        {"level": 2, "title": "ssh-filter"}
+      ]
+    },
+    {
+      "key": "15-waf",
+      "title": "WAF (Web 应用防火墙)",
+      "desc": "WAF 配置文件、签名、约束(constraint)、方法(method)与规则",
+      "sections": [
+        {"level": 2, "title": "waf"}
+      ]
+    },
+    {
+      "key": "16-log-report",
+      "title": "日志 / 报表 / 监控 / 告警邮件",
+      "desc": "日志设置(磁盘/远程/FortiAnalyzer)、日志过滤、报表配置、监控设置、告警邮件(alertemail)",
+      "sections": [
+        {"level": 2, "title": "log"},
+        {"level": 2, "title": "report"},
+        {"level": 2, "title": "monitoring"},
+        {"level": 2, "title": "alertemail"}
+      ]
+    },
+    {
+      "key": "17-ztna",
+      "title": "零信任网络访问 (ZTNA)",
+      "desc": "ZTNA 代理、ZTNA 规则、ZTNA 服务器与标签",
+      "sections": [
+        {"level": 2, "title": "ztna"}
+      ]
+    },
+    {
+      "key": "18-switch-wireless",
+      "title": "交换机 / 无线 / 扩展控制器",
+      "desc": "Switch Controller(托管交换机)、Wireless Controller(AP/SSID)、Extension Controller(扩展设备)、以太网 OAM",
+      "sections": [
+        {"level": 2, "title": "switch-controller"},
+        {"level": 2, "title": "wireless-controller"},
+        {"level": 2, "title": "extension-controller"},
+        {"level": 2, "title": "ethernet-oam"}
+      ]
+    },
+    {
+      "key": "19-automation-cloud",
+      "title": "自动化 / 云集成 / WAN优化 / 其他",
+      "desc": "自动化(automation 配置)、AWS/Azure/NSX-T 连接器、遥测控制器、WAN 优化、终端控制、ICAP、LLM、DPDK",
+      "sections": [
+        {"level": 2, "title": "automation"},
+        {"level": 2, "title": "aws"},
+        {"level": 2, "title": "azure"},
+        {"level": 2, "title": "nsxt"},
+        {"level": 2, "title": "telemetry-controller"},
+        {"level": 2, "title": "wanopt"},
+        {"level": 2, "title": "endpoint-control"},
+        {"level": 2, "title": "icap"},
+        {"level": 2, "title": "llm"},
+        {"level": 2, "title": "dpdk"}
+      ]
+    },
+    {
+      "key": "20-execute",
+      "title": "运维命令 (execute)",
+      "desc": "备份/恢复/重启/出厂重置/配置事务/接口/路由/HA/更新/上传下载/Ping/Traceroute/抓包等运行时命令",
+      "sections": [
+        {"level": 2, "title": "execute", "prefix": true}
+      ]
+    },
+    {
+      "key": "21-diagnose",
+      "title": "诊断命令 (diagnose)",
+      "desc": "故障排查命令：防火墙/路由/IP/IPv6/IPS/VPN/SNMP/NPU/LLDP/调试/嗅探/硬件/日志等 diagnose 子命令",
+      "sections": [
+        {"level": 2, "title": "diagnose", "prefix": true}
+      ]
+    }
+  ]
+}
